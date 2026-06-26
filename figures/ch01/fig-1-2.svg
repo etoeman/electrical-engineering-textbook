@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="640" height="330" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Figure 1.2 circuit representing automotive lighting system</title>
+  <desc id="desc">Circuit with a 12.6 volt battery, open switch, and two parallel resistors labeled R_L and R_R representing headlights.</desc>
+  <defs>
+    <style>
+      .wire { fill:none; stroke:#111; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+      .sym { fill:none; stroke:#111; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+      .node { fill:#111; stroke:#111; stroke-width:1; }
+      .open { fill:#fff; stroke:#111; stroke-width:3; }
+      .label { font-family:'Times New Roman', Times, serif; font-size:30px; fill:#111; }
+      .small { font-family:'Times New Roman', Times, serif; font-size:24px; fill:#111; }
+    </style>
+  </defs>
+
+  <rect width="640" height="330" fill="#fff"/>
+
+  <!-- left vertical battery branch -->
+  <path class="wire" d="M80 55 L80 102"/>
+  <path class="wire" d="M80 158 L80 270"/>
+  <line class="sym" x1="52" y1="102" x2="108" y2="102"/>
+  <line class="sym" x1="62" y1="128" x2="98" y2="128"/>
+  <line class="sym" x1="52" y1="158" x2="108" y2="158"/>
+  <text class="small" x="31" y="95">+</text>
+  <text class="small" x="34" y="169">−</text>
+  <text class="label" x="124" y="149">12.6 V</text>
+
+  <!-- bottom wire -->
+  <path class="wire" d="M80 270 L360 270 L520 270"/>
+
+  <!-- top wire to switch -->
+  <path class="wire" d="M80 55 L172 55"/>
+
+  <!-- open switch -->
+  <circle class="node" cx="172" cy="55" r="6"/>
+  <circle class="open" cx="245" cy="55" r="8"/>
+  <line class="sym" x1="177" y1="52" x2="232" y2="20"/>
+  <polygon points="232,20 220,22 227,31" fill="#111"/>
+
+  <!-- top wire after switch -->
+  <path class="wire" d="M253 55 L360 55 L520 55"/>
+  <circle class="node" cx="360" cy="55" r="7"/>
+
+  <!-- left resistor branch RL -->
+  <path class="wire" d="M360 55 L360 110"/>
+  <polyline class="sym" points="360,110 340,123 380,145 340,167 380,189 340,211 360,224"/>
+  <path class="wire" d="M360 224 L360 270"/>
+  <circle class="node" cx="360" cy="270" r="8"/>
+  <text class="label" x="393" y="177">R<tspan baseline-shift="sub" font-size="20">L</tspan></text>
+
+  <!-- right resistor branch RR -->
+  <path class="wire" d="M520 55 L520 110"/>
+  <polyline class="sym" points="520,110 500,123 540,145 500,167 540,189 500,211 520,224"/>
+  <path class="wire" d="M520 224 L520 270"/>
+  <text class="label" x="553" y="177">R<tspan baseline-shift="sub" font-size="20">R</tspan></text>
+</svg>
