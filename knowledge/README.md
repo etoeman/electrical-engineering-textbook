@@ -1,60 +1,23 @@
 # Knowledge Base
 
-This folder separates engineering knowledge from the linear book manuscript.
+This folder contains the digested Electrical Engineering Knowledge Database.
 
-The `book/` or `chapters/` files preserve the textbook structure. The `knowledge/` folder organizes concepts, equations, figures, examples, and glossary terms so the material can be searched, reused, linked, and eventually turned into learning paths, reference pages, quizzes, or interactive lessons.
+It is not a verbatim copy of the textbook.
 
-## Structure
+The textbook chapter and section sequence is used as the learning pathway, but each section folder contains fine-grained atomic concept notes.
+
+Each concept note follows the locked EEKB Concept Note Standard.
+
+Example structure:
 
 ```text
 knowledge/
-├── concepts/
-├── equations/
-├── examples/
-├── figures/
-├── glossary/
-└── maps/
+└── ch01-basic-circuit-theory/
+    └── 1.3-current-and-kirchhoffs-current-law/
+        ├── Current.md
+        ├── Conventional Current.md
+        ├── Current Direction.md
+        └── Kirchhoff's Current Law.md
 ```
 
-## Concept Files
-
-Each concept should eventually have its own file:
-
-```text
-knowledge/concepts/thevenin-equivalent.md
-knowledge/concepts/kirchhoffs-current-law.md
-knowledge/concepts/phasor.md
-```
-
-Concept files should link back to the book sections where the concept appears.
-
-## Equation Files
-
-Important equations should eventually have their own files:
-
-```text
-knowledge/equations/ohms-law.md
-knowledge/equations/kirchhoffs-current-law.md
-```
-
-## Figure Metadata Files
-
-Figure artwork remains in `figures/`, while metadata and teaching notes live here:
-
-```text
-knowledge/figures/fig-1-1.md
-```
-
-## Maps
-
-Maps describe relationships:
-
-- concept prerequisites
-- chapter-to-concept mapping
-- equation dependencies
-- figure usage
-- review-item links
-
-## Principle
-
-The book is one presentation of the knowledge. The knowledge base is the reusable intellectual structure behind the book.
+The book is one presentation of the knowledge. The knowledge base is the author's reusable, curated engineering understanding behind the book.
