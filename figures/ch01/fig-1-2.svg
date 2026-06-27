@@ -16,14 +16,15 @@
   <rect width="640" height="330" fill="#fff"/>
 
   <!-- left vertical battery branch -->
-  <path class="wire" d="M80 55 L80 102"/>
-  <path class="wire" d="M80 158 L80 270"/>
-  <line class="sym" x1="52" y1="102" x2="108" y2="102"/>
-  <line class="sym" x1="62" y1="128" x2="98" y2="128"/>
-  <line class="sym" x1="52" y1="158" x2="108" y2="158"/>
-  <text class="small" x="31" y="95">+</text>
-  <text class="small" x="34" y="169">−</text>
-  <text class="label" x="124" y="149">12.6 V</text>
+  <path class="wire" d="M80 55 L80 112"/>
+  <path class="wire" d="M80 148 L80 270"/>
+
+  <!-- two-cell battery symbol: long plate is positive, short plate is negative -->
+  <line class="sym" x1="52" y1="112" x2="108" y2="112"/>
+  <line class="sym" x1="62" y1="148" x2="98" y2="148"/>
+  <text class="small" x="31" y="105">+</text>
+  <text class="small" x="34" y="159">−</text>
+  <text class="label" x="124" y="143">12.6 V</text>
 
   <!-- bottom wire -->
   <path class="wire" d="M80 270 L360 270 L520 270"/>
