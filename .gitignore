@@ -1,8 +1,6 @@
-# Obsidian local workspace state
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
-.obsidian/workspace.json.bak
-.obsidian/workspace-mobile.json.bak
+# Obsidian personal workspace state
+.obsidian/workspace*.json
+.obsidian/workspace*.json.bak
 
 # Obsidian cache and plugin data that should remain local
 .obsidian/cache/
