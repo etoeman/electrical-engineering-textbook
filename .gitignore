@@ -1,0 +1,19 @@
+# Obsidian local workspace state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspace.json.bak
+.obsidian/workspace-mobile.json.bak
+
+# Obsidian cache and plugin data that should remain local
+.obsidian/cache/
+.obsidian/plugins/*/data.json
+.obsidian/plugins/*/.hotreload
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Build outputs and temporary files
+build/
+*.tmp
+*.bak
