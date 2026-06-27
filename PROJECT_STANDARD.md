@@ -257,7 +257,40 @@ Tracing may be used as a visual reference to achieve accurate reproduction, but 
 
 ---
 
-# 9. Writing Standards
+# 9. Obsidian Git Policy
+
+The local Obsidian vault is the Git working copy of the repository.
+
+There shall not be separate local-only project content. Project content belongs in GitHub.
+
+Project files shall be committed to GitHub, including:
+
+- Markdown content
+- chapters
+- knowledge notes
+- figures and figure sources
+- references
+- templates
+- project governance files
+- project-level configuration files
+
+Obsidian personal workspace state shall not be committed.
+
+Ignored Obsidian files include:
+
+- `.obsidian/workspace.json`
+- `.obsidian/workspace-mobile.json`
+- workspace backup files
+- plugin cache files
+- plugin local data files
+
+Shared Obsidian configuration may be committed only when it defines the project vault behavior rather than a user's personal workspace state.
+
+The repository `.gitignore` governs this policy.
+
+---
+
+# 10. Writing Standards
 
 Technical writing shall follow these rules:
 
@@ -273,7 +306,7 @@ Technical writing shall follow these rules:
 
 ---
 
-# 10. Change Control
+# 11. Change Control
 
 Once a project decision is approved, it is locked.
 
@@ -283,7 +316,7 @@ Any proposed modification is a change request. Approved changes shall result in 
 
 ---
 
-# 11. Version History
+# 12. Version History
 
 ## v1.0
 
