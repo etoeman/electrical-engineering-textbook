@@ -2,34 +2,32 @@
 \usepackage[american]{circuitikz}
 \ctikzset{
   resistors/scale=0.78,
-  bipoles/thickness=1.1,
-  label/align=straight
+  bipoles/thickness=1.05,
+  label/align=straight,
+  batteries/scale=0.75,
+  switches/scale=0.85
 }
 
 \begin{document}
 \begin{circuitikz}[line width=0.8pt]
-  % Figure 1.2 — Circuit representing the automotive lighting system.
-  % The headlights are represented by resistances.
+  % Figure 1.2 — Circuit representing automotive lighting system.
+  % Headlights are represented by parallel resistances.
 
-  % Battery
-  \draw (0,0) to[battery1, l_=\mbox{$12.6\,\mathrm{V}$}] (0,3.2);
-  \node at (-0.38,2.55) {$+$};
-  \node at (-0.38,0.65) {$-$};
+  % Main loop and source
+  \draw (0,0) to[battery1] (0,2.7);
+  \node at (-0.36,2.22) {$+$};
+  \node at (-0.36,0.48) {$-$};
+  \node[right] at (0.42,1.35) {$12.6\,\mathrm{V}$};
 
   % Top branch with open switch
-  \draw (0,3.2) -- (1.25,3.2);
-  \draw (1.25,3.2) node[circ]{} -- ++(0.95,0.55);
-  \draw[->, line width=0.8pt] (1.65,3.43) -- (2.18,3.74);
-  \draw (2.55,3.2) node[ocirc]{} -- (4.2,3.2) node[circ]{} -- (5.9,3.2);
+  \draw (0,2.7) to[ospst] (2.0,2.7);
+  \draw (2.0,2.7) -- (3.0,2.7) node[circ]{} -- (4.35,2.7);
 
-  % Bottom return
-  \draw (0,0) -- (4.2,0) node[circ]{} -- (5.9,0);
+  % Bottom conductor
+  \draw (0,0) -- (3.0,0) node[circ]{} -- (4.35,0);
 
-  % Left headlight resistance
-  \draw (4.2,3.2) to[R, l_=$R_L$] (4.2,0);
-
-  % Right headlight resistance branch
-  \draw (4.2,3.2) -- (5.9,3.2)
-        to[R, l_=$R_R$] (5.9,0) -- (4.2,0);
+  % Parallel headlight resistances
+  \draw (3.0,2.7) to[R, l_=$R_L$] (3.0,0);
+  \draw (4.35,2.7) to[R, l_=$R_R$] (4.35,0);
 \end{circuitikz}
 \end{document}
