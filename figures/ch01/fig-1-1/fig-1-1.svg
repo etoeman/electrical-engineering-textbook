@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Figure 1.1 Automotive lighting system</title>
+  <desc id="desc">A vector diagram of an automotive lighting system with a switch, battery, two headlights, wiring, and chassis return.</desc>
+  <defs>
+    <linearGradient id="metal" x1="0" x2="1">
+      <stop offset="0" stop-color="#f8f8f8"/><stop offset="0.5" stop-color="#bcbcbc"/><stop offset="1" stop-color="#f5f5f5"/>
+    </linearGradient>
+    <linearGradient id="batteryBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eeeeee"/><stop offset="0.55" stop-color="#bdbdbd"/><stop offset="1" stop-color="#888888"/>
+    </linearGradient>
+    <linearGradient id="batteryTop" x1="0" x2="1">
+      <stop offset="0" stop-color="#4a4a4a"/><stop offset="1" stop-color="#151515"/>
+    </linearGradient>
+    <radialGradient id="lampGlow" cx="35%" cy="45%" r="65%">
+      <stop offset="0" stop-color="#fffdf0"/><stop offset="0.45" stop-color="#ffe86a"/><stop offset="0.8" stop-color="#e3b300"/><stop offset="1" stop-color="#9c7600"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffe066" stop-opacity="0.65"/><stop offset="1" stop-color="#ffe066" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      .wire{fill:none;stroke:#111;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.thin{fill:none;stroke:#111;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}.label{font-family:'Times New Roman',Times,serif;font-size:32px;fill:#111}.node{fill:#111}.outline{fill:none;stroke:#111;stroke-width:3;stroke-linejoin:round}
+    </style>
+  </defs>
+  <rect width="1200" height="720" fill="#fff"/>
+
+  <g id="chassis-return">
+    <rect x="440" y="560" width="630" height="34" fill="#cfd3d5"/>
+    <line x1="440" y1="560" x2="1070" y2="560" class="wire"/>
+    <text x="670" y="646" class="label">Chassis “return”</text>
+  </g>
+
+  <g id="switch" transform="translate(90 75)">
+    <text x="60" y="-28" class="label">Switch</text>
+    <polygon points="0,38 40,0 140,18 100,58" fill="url(#metal)" stroke="#111" stroke-width="3"/>
+    <polygon points="0,38 0,112 100,134 100,58" fill="#d5d5d5" stroke="#111" stroke-width="3"/>
+    <polygon points="100,58 140,18 140,92 100,134" fill="#c7c7c7" stroke="#111" stroke-width="3"/>
+    <ellipse cx="-28" cy="75" rx="18" ry="30" fill="url(#metal)" stroke="#111" stroke-width="3"/>
+    <rect x="-28" y="60" width="62" height="30" rx="8" fill="url(#metal)" stroke="#111" stroke-width="3"/>
+    <ellipse cx="55" cy="23" rx="12" ry="5" fill="#f4f4f4" stroke="#111" stroke-width="2"/>
+  </g>
+
+  <g id="battery">
+    <polygon points="205,365 420,390 420,545 205,520" fill="url(#batteryBody)" stroke="#111" stroke-width="3"/>
+    <polygon points="205,365 265,330 480,355 420,390" fill="url(#batteryTop)" stroke="#111" stroke-width="3"/>
+    <polygon points="420,390 480,355 480,510 420,545" fill="#757575" stroke="#111" stroke-width="3"/>
+    <polygon points="245,430 385,444 385,505 245,490" fill="#0d4d93" stroke="#111" stroke-width="3"/>
+    <text x="270" y="478" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="34" fill="#fff">12.6 V</text>
+    <ellipse cx="275" cy="345" rx="31" ry="12" fill="#ff4a3c" stroke="#111" stroke-width="3"/>
+    <rect x="244" y="304" width="62" height="42" rx="8" fill="#ff2a1b" stroke="#111" stroke-width="3"/>
+    <ellipse cx="275" cy="304" rx="31" ry="12" fill="#ff7c70" stroke="#111" stroke-width="3"/>
+    <text x="264" y="336" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="34" fill="#111">+</text>
+    <text x="315" y="318" class="label">+</text>
+    <ellipse cx="405" cy="353" rx="28" ry="10" fill="#444" stroke="#111" stroke-width="3"/>
+    <rect x="377" y="318" width="56" height="36" rx="8" fill="#3f3f3f" stroke="#111" stroke-width="3"/>
+    <ellipse cx="405" cy="318" rx="28" ry="10" fill="#888" stroke="#111" stroke-width="3"/>
+    <text x="394" y="347" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="30" fill="#111">−</text>
+    <text x="458" y="318" class="label">−</text>
+    <text x="265" y="608" class="label">Battery</text>
+  </g>
+
+  <g id="left-headlight" transform="translate(650 250)">
+    <polygon points="70,22 220,-20 220,90 70,48" fill="url(#beam)"/>
+    <g stroke="#f1ca10" stroke-width="2" opacity="0.9"><line x1="82" y1="29" x2="215" y2="-15"/><line x1="87" y1="37" x2="220" y2="15"/><line x1="87" y1="45" x2="220" y2="45"/><line x1="82" y1="53" x2="220" y2="78"/><line x1="75" y1="60" x2="210" y2="108"/></g>
+    <ellipse cx="24" cy="40" rx="12" ry="30" fill="#aaa" stroke="#111" stroke-width="3"/>
+    <ellipse cx="55" cy="40" rx="48" ry="54" fill="url(#metal)" stroke="#111" stroke-width="4"/>
+    <ellipse cx="72" cy="40" rx="36" ry="48" fill="url(#lampGlow)" stroke="#111" stroke-width="3"/>
+    <circle cx="60" cy="42" r="18" fill="#fff8c6" opacity="0.85" stroke="#e1b700" stroke-width="1.5"/>
+    <path d="M72 2 C85 15 90 28 90 42 C89 58 82 73 70 83" fill="none" stroke="#fff4a0" stroke-width="3"/>
+    <rect x="50" y="89" width="34" height="22" rx="4" fill="#bbb" stroke="#111" stroke-width="3"/>
+  </g>
+  <g id="right-headlight" transform="translate(895 250)">
+    <polygon points="70,22 220,-20 220,90 70,48" fill="url(#beam)"/>
+    <g stroke="#f1ca10" stroke-width="2" opacity="0.9"><line x1="82" y1="29" x2="215" y2="-15"/><line x1="87" y1="37" x2="220" y2="15"/><line x1="87" y1="45" x2="220" y2="45"/><line x1="82" y1="53" x2="220" y2="78"/><line x1="75" y1="60" x2="210" y2="108"/></g>
+    <ellipse cx="24" cy="40" rx="12" ry="30" fill="#aaa" stroke="#111" stroke-width="3"/>
+    <ellipse cx="55" cy="40" rx="48" ry="54" fill="url(#metal)" stroke="#111" stroke-width="4"/>
+    <ellipse cx="72" cy="40" rx="36" ry="48" fill="url(#lampGlow)" stroke="#111" stroke-width="3"/>
+    <circle cx="60" cy="42" r="18" fill="#fff8c6" opacity="0.85" stroke="#e1b700" stroke-width="1.5"/>
+    <path d="M72 2 C85 15 90 28 90 42 C89 58 82 73 70 83" fill="none" stroke="#fff4a0" stroke-width="3"/>
+    <rect x="50" y="89" width="34" height="22" rx="4" fill="#bbb" stroke="#111" stroke-width="3"/>
+  </g>
+
+  <path d="M230 155 H1020" class="wire"/>
+  <path d="M690 155 V250" class="wire"/><path d="M690 360 V560" class="wire"/>
+  <path d="M935 155 V250" class="wire"/><path d="M935 360 V560" class="wire"/>
+  <path d="M275 304 C275 245 235 250 230 155" class="wire"/>
+  <path d="M405 318 C520 318 520 560 532 560" class="wire"/>
+
+  <circle cx="690" cy="155" r="10" class="node"/><circle cx="935" cy="155" r="10" class="node"/>
+  <circle cx="532" cy="560" r="10" class="node"/><circle cx="690" cy="560" r="10" class="node"/><circle cx="935" cy="560" r="10" class="node"/>
+
+  <text x="710" y="420" class="label">Left</text><text x="710" y="458" class="label">Headlight</text>
+  <text x="955" y="420" class="label">Right</text><text x="955" y="458" class="label">Headlight</text>
+</svg>
