@@ -1,1 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Figure 1.2 Circuit representing automotive lighting system</title>
+  <desc id="desc">A 12.6 volt battery feeding an open switch and two headlight resistances R_L and R_R in parallel.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto">
+      <path d="M0,0 L12,4 L0,8 Z" fill="#111"/>
+    </marker>
+    <style>
+      .wire{fill:none;stroke:#111;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .elem{fill:none;stroke:#111;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .node{fill:#111;stroke:#111;stroke-width:1}
+      .open{fill:white;stroke:#111;stroke-width:3}
+      .txt{font-family:'Times New Roman', Times, serif;font-size:30px;fill:#111}
+      .sym{font-family:'Times New Roman', Times, serif;font-size:34px;font-style:italic;fill:#111}
+    </style>
+  </defs>
+  <rect width="720" height="420" fill="white"/>
+  <path class="wire" d="M70 330 L70 115 L140 115"/>
+  <line class="elem" x1="38" y1="210" x2="102" y2="210"/>
+  <line class="elem" x1="50" y1="235" x2="90" y2="235"/>
+  <line class="elem" x1="38" y1="260" x2="102" y2="260"/>
+  <line class="elem" x1="50" y1="285" x2="90" y2="285"/>
+  <text class="txt" x="35" y="192">+</text>
+  <text class="txt" x="35" y="292">−</text>
+  <text class="txt" x="120" y="248">12.6 V</text>
+  <circle class="node" cx="140" cy="115" r="8"/>
+  <path class="elem" d="M140 115 L205 82" marker-end="url(#arrow)"/>
+  <circle class="open" cx="245" cy="115" r="8"/>
+  <path class="wire" d="M270 115 L470 115 L610 115 L610 330 L70 330"/>
+  <circle class="node" cx="330" cy="115" r="8"/>
+  <circle class="node" cx="330" cy="330" r="8"/>
+  <path class="wire" d="M330 115 L330 170"/>
+  <path class="elem" d="M330 170 L310 184 L350 210 L310 236 L350 262 L330 276"/>
+  <path class="wire" d="M330 276 L330 330"/>
+  <text class="sym" x="375" y="230">R<tspan baseline-shift="sub" font-size="22">L</tspan></text>
+  <path class="wire" d="M470 115 L470 170"/>
+  <path class="elem" d="M470 170 L450 184 L490 210 L450 236 L490 262 L470 276"/>
+  <path class="wire" d="M470 276 L470 330"/>
+  <text class="sym" x="515" y="230">R<tspan baseline-shift="sub" font-size="22">R</tspan></text>
+</svg>
