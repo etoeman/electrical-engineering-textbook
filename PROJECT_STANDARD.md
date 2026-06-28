@@ -190,6 +190,8 @@ figures/
 
 Figures are organized by chapter and then by individual figure folder.
 
+There shall be no separate `figure-source/`, `image-source/`, `images/`, or output-only figure folder. Every file related to a figure lives inside that figure's own folder.
+
 Example:
 
 ```text
@@ -197,7 +199,8 @@ figures/
 └── ch01/
     └── fig-1-3/
         ├── fig-1-3.svg
-        └── fig-1-3.png
+        ├── fig-1-3.png
+        └── metadata.md
 ```
 
 Circuit diagram example:
@@ -208,8 +211,13 @@ figures/
     └── fig-2-8/
         ├── fig-2-8.tex
         ├── fig-2-8.svg
-        └── fig-2-8.png
+        ├── fig-2-8.png
+        └── metadata.md
 ```
+
+## Figure Folder Metadata
+
+Each figure folder shall contain a `metadata.md` file documenting figure number, title, chapter, figure type, status, published image, source files, and notes.
 
 ## Electrical Circuit Diagrams
 
