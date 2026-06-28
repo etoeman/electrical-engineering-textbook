@@ -1,53 +1,65 @@
-# Chapter Manuscript Policy
+# Chapters
 
-Each chapter may contain two manuscript tracks.
+This folder contains the digital textbook section files.
 
-## Original Track
+The chapter structure follows the locked EEKB production standard:
 
-```text
-original.md
-```
+- one folder per chapter;
+- one Markdown file per textbook section;
+- separate artifacts for the Digital Edition, Enhanced Edition, and Section Review.
 
-This file preserves the original book as faithfully as possible:
-
-- original wording
-- original section order
-- original figure numbering
-- original equation numbering
-- original technical claims, even when questionable
-
-Corrections are not silently inserted into this file. If an error is suspected, create a review item under `reviews/technical/`.
-
-## Improved Track
+## Chapter Folder Pattern
 
 ```text
-improved.md
+chapters/
+└── 01-basic-circuit-theory/
+    ├── README.md
+    ├── 1.1-introduction-to-electrical-engineering.md
+    ├── 1.1-introduction-to-electrical-engineering-enhanced.md
+    ├── 1.1-introduction-to-electrical-engineering-review.md
+    ├── 1.2-physical-basis-of-circuit-theory.md
+    ├── 1.2-physical-basis-of-circuit-theory-enhanced.md
+    └── 1.2-physical-basis-of-circuit-theory-review.md
 ```
 
-This file is the revised teaching edition:
+## Digital Edition
 
-- clearer explanations
-- corrected known errors
-- improved examples
-- better sequencing where appropriate
-- links to digital resources
-- references to review items when changes are based on identified issues
+The base section file is the faithful digital recreation of the original textbook section.
 
-## Current Transitional Files
-
-Some early work may use:
+Example:
 
 ```text
-chapter.md
+1.3-current-and-kirchhoffs-current-law.md
 ```
 
-Those files should be treated as transitional drafts until split into `original.md` and `improved.md`.
+The Digital Edition preserves the original wording, equations, examples, figures, notation, and technical claims except for transcription corrections.
 
-## Recommended Chapter Folder
+## Enhanced Edition
+
+The enhanced section file is the corrected and improved teaching version.
+
+Example:
 
 ```text
-chapters/01-basic-circuit-theory/
-├── original.md
-├── improved.md
-└── README.md
+1.3-current-and-kirchhoffs-current-law-enhanced.md
 ```
+
+The Enhanced Edition may correct technical errors, improve explanations, add conceptual insight, improve notation, and add teaching support.
+
+## Section Review
+
+The review section file records editorial observations and recommended improvements.
+
+Example:
+
+```text
+1.3-current-and-kirchhoffs-current-law-review.md
+```
+
+The Section Review explains why changes are made in the Enhanced Edition.
+
+## Figure References
+
+Markdown section files reference only PNG figures.
+
+Figure source and published outputs live under `figures/` according to the locked figure standard.
