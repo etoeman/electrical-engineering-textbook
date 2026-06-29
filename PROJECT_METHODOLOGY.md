@@ -1,5 +1,5 @@
 # Electrical Engineering Knowledge Database
-## Project Methodology (v1.1)
+## Project Methodology (v1.2)
 
 ---
 
@@ -14,13 +14,13 @@ This document defines the repeatable workflows used to build the Electrical Engi
 # 2. Core Production Workflow
 
 ```text
-Original Book -> Digital Recreation -> Error/Pedagogic Fixes -> Enhanced Edition -> Knowledge Database -> Author Review and Refinement
+Original Book -> Digital Recreation -> Text Fixes -> Enhanced Edition -> Knowledge Database -> Author Review and Refinement
 ```
 
 The production flow is sequential. Each stage depends on the previous stage.
 
 - The **Digital Recreation** preserves the source material faithfully.
-- The **Error/Pedagogic Fixes** stage records issues found in the Digital Recreation and proposed fixes.
+- The **Text Fixes** stage records technical errors, pedagogic issues, and proposed fixes found in the Digital Recreation.
 - The **Enhanced Edition** applies approved fixes and pedagogical improvements.
 - The **Knowledge Database** is extracted from the Enhanced Edition, not directly from the Digital Recreation.
 - **Author Review and Refinement** is the final authority for the knowledge base.
@@ -51,25 +51,25 @@ Example:
 
 ---
 
-# 4. Stage 2 — Error/Pedagogic Fixes
+# 4. Stage 2 — Text Fixes
 
-After a digital section has been completed and checked against the source, the assistant shall create an intermediate Error/Pedagogic Fixes file.
+After a digital section has been completed and checked against the source, the assistant shall create an intermediate Text Fixes file.
 
 This stage documents issues to be corrected before creating the Enhanced Edition. It is not the Enhanced Edition itself.
 
 For every completed section, the companion file shall use the suffix:
 
 ```text
--error-pedagogic-fixes.md
+-fixes.md
 ```
 
 Example:
 
 ```text
-1.3-current-and-kirchhoffs-current-law-error-pedagogic-fixes.md
+1.3-current-and-kirchhoffs-current-law-fixes.md
 ```
 
-The Error/Pedagogic Fixes file records:
+The Text Fixes file records error and pedagogic fixes, including:
 
 - Technical errors.
 - Ambiguous explanations.
@@ -81,15 +81,15 @@ The Error/Pedagogic Fixes file records:
 - Proposed corrections.
 - Rationale for each change to be incorporated into the Enhanced Edition.
 
-The Error/Pedagogic Fixes file is the change-control bridge between the faithful Digital Recreation and the improved Enhanced Edition.
+The Text Fixes file is the change-control bridge between the faithful Digital Recreation and the improved Enhanced Edition.
 
 ---
 
 # 5. Stage 3 — Enhanced Edition
 
-The Enhanced Edition is created only after the Error/Pedagogic Fixes stage.
+The Enhanced Edition is created only after the Text Fixes stage.
 
-The Enhanced Edition applies approved corrections and pedagogical improvements from the Error/Pedagogic Fixes file while preserving the technical meaning of the original source.
+The Enhanced Edition applies approved corrections and pedagogical improvements from the Text Fixes file while preserving the technical meaning of the original source.
 
 Enhanced Edition files use the suffix:
 
@@ -194,8 +194,8 @@ After GitHub is updated, the user will synchronize the local Obsidian working co
 Before considering a section complete:
 
 - Digital recreation should be checked against the source.
-- Error/Pedagogic Fixes should document issues and proposed corrections before Enhanced Edition work begins.
-- Enhanced Edition should incorporate approved fixes from the Error/Pedagogic Fixes file.
+- Text Fixes should document error and pedagogic issues and proposed corrections before Enhanced Edition work begins.
+- Enhanced Edition should incorporate approved fixes from the Text Fixes file.
 - Knowledge extraction should be performed from the Enhanced Edition.
 - Figure references should point only to PNGs.
 - Every PNG should have its master source.
@@ -205,6 +205,10 @@ Before considering a section complete:
 ---
 
 # 12. Version History
+
+## v1.2
+
+Renamed the intermediate stage to Text Fixes and standardized its file suffix as `-fixes.md`, while preserving its purpose as the error and pedagogic fixes record between Digital Recreation and Enhanced Edition.
 
 ## v1.1
 
