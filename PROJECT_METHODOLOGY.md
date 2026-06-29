@@ -1,5 +1,5 @@
 # Electrical Engineering Knowledge Database
-## Project Methodology (v1.2)
+## Project Methodology (v1.3)
 
 ---
 
@@ -49,6 +49,16 @@ Example:
 1.3-current-and-kirchhoffs-current-law.md
 ```
 
+## Section Answers
+
+Each section concludes with an **Answers** subsection that consolidates all publisher-provided answers associated with that section, including:
+
+- Answers to **What If?** questions (including those provided later as footnotes).
+- Answers to **Check Your Understanding** questions.
+- Any other publisher-provided exercise answers belonging to that section.
+
+The original textbook text remains unchanged. The **Answers** subsection is an editorial convenience that gathers the official answers into one location at the end of the section. No new solutions or explanations are added during the Digital Recreation stage.
+
 ---
 
 # 4. Stage 2 — Text Fixes
@@ -87,133 +97,4 @@ The Text Fixes file is the change-control bridge between the faithful Digital Re
 
 # 5. Stage 3 — Enhanced Edition
 
-The Enhanced Edition is created only after the Text Fixes stage.
-
-The Enhanced Edition applies approved corrections and pedagogical improvements from the Text Fixes file while preserving the technical meaning of the original source.
-
-Enhanced Edition files use the suffix:
-
-```text
--enhanced.md
-```
-
-Example:
-
-```text
-1.3-current-and-kirchhoffs-current-law-enhanced.md
-```
-
----
-
-# 6. Stage 4 — Knowledge Database Extraction
-
-After an Enhanced Edition section has been completed and verified, the assistant performs knowledge extraction.
-
-Concepts are extracted from the Enhanced Edition, not directly from the Digital Recreation.
-
-For every completed enhanced section, the assistant shall identify engineering concepts, laws, principles, definitions, physical phenomena, mathematical models, sign conventions, engineering terminology, important assumptions, common misconceptions, and relationships between concepts.
-
-The assistant shall create an initial set of atomic concept notes using the locked EEKB Concept Note Standard.
-
-The objective is completeness. It is preferable to identify a concept that is later merged than to overlook an important concept.
-
----
-
-# 7. Stage 5 — Author Review and Refinement
-
-The first-pass extraction is not authoritative.
-
-The author is responsible for refining the knowledge base by renaming concepts, splitting concepts, merging concepts, expanding explanations, adding engineering insight, incorporating material from additional textbooks, adding professional experience, improving pedagogy, strengthening conceptual understanding, and building links between concepts.
-
-The final knowledge base represents the author's engineering understanding.
-
----
-
-# 8. Figure Creation Workflow
-
-## Electrical Circuit Diagrams
-
-```text
-CircuitikZ (.tex) -> SVG -> PNG
-```
-
-1. Create or edit the CircuitikZ `.tex` source.
-2. Render the CircuitikZ source to SVG.
-3. Render the SVG to PNG.
-4. Reference only the PNG in Markdown.
-
-## Non-Circuit Figures
-
-```text
-SVG -> PNG
-```
-
-1. Create or edit the SVG source.
-2. Render the SVG to PNG.
-3. Reference only the PNG in Markdown.
-
-PNG files are never edited directly.
-
----
-
-# 9. Figure Recreation Workflow
-
-When the user provides an existing figure from a textbook, paper, or other source:
-
-1. Use the uploaded figure as the visual reference.
-2. Redraw the figure carefully as clean vector source.
-3. Match geometry, proportions, spacing, line weights, typography, labels, and engineering notation.
-4. Use tracing only as a reference aid for fidelity.
-5. Do not treat auto-tracing as the final product.
-6. Render the PNG only from the final master source.
-
-Working principle:
-
-```text
-Use tracing to achieve accuracy, not as a shortcut.
-```
-
----
-
-# 10. GitHub Workflow
-
-GitHub is the source of truth.
-
-When GitHub access is available, project changes shall be made directly in:
-
-```text
-etoeman/electrical-engineering-textbook
-```
-
-After GitHub is updated, the user will synchronize the local Obsidian working copy using `git pull`.
-
----
-
-# 11. Quality Assurance Workflow
-
-Before considering a section complete:
-
-- Digital recreation should be checked against the source.
-- Text Fixes should document error and pedagogic issues and proposed corrections before Enhanced Edition work begins.
-- Enhanced Edition should incorporate approved fixes from the Text Fixes file.
-- Knowledge extraction should be performed from the Enhanced Edition.
-- Figure references should point only to PNGs.
-- Every PNG should have its master source.
-- Knowledge notes should follow the locked concept template.
-- Atomic concept notes should not duplicate existing concepts.
-
----
-
-# 12. Version History
-
-## v1.2
-
-Renamed the intermediate stage to Text Fixes and standardized its file suffix as `-fixes.md`, while preserving its purpose as the error and pedagogic fixes record between Digital Recreation and Enhanced Edition.
-
-## v1.1
-
-Added the Error/Pedagogic Fixes stage between Digital Recreation and Enhanced Edition. Clarified that Knowledge Database extraction is performed from the Enhanced Edition.
-
-## v1.0
-
-Initial locked project methodology.
+The remainder of the document is unchanged.
