@@ -1,5 +1,5 @@
 # Electrical Engineering Knowledge Database
-## Project Methodology (v1.0)
+## Project Methodology (v1.1)
 
 ---
 
@@ -14,8 +14,16 @@ This document defines the repeatable workflows used to build the Electrical Engi
 # 2. Core Production Workflow
 
 ```text
-Original Book -> Digital Recreation -> First-Pass Concept Extraction -> Knowledge Database -> Author Review and Refinement
+Original Book -> Digital Recreation -> Error/Pedagogic Fixes -> Enhanced Edition -> Knowledge Database -> Author Review and Refinement
 ```
+
+The production flow is sequential. Each stage depends on the previous stage.
+
+- The **Digital Recreation** preserves the source material faithfully.
+- The **Error/Pedagogic Fixes** stage records issues found in the Digital Recreation and proposed fixes.
+- The **Enhanced Edition** applies approved fixes and pedagogical improvements.
+- The **Knowledge Database** is extracted from the Enhanced Edition, not directly from the Digital Recreation.
+- **Author Review and Refinement** is the final authority for the knowledge base.
 
 ---
 
@@ -29,13 +37,81 @@ The goal is faithful reproduction, not interpretation.
 
 No concepts are extracted during this stage.
 
+Digital Recreation files use the base section filename:
+
+```text
+<section-slug>.md
+```
+
+Example:
+
+```text
+1.3-current-and-kirchhoffs-current-law.md
+```
+
 ---
 
-# 4. Stage 2 — First-Pass Concept Extraction
+# 4. Stage 2 — Error/Pedagogic Fixes
 
-After a digital section has been completed and verified, the assistant performs the first-pass concept extraction.
+After a digital section has been completed and checked against the source, the assistant shall create an intermediate Error/Pedagogic Fixes file.
 
-For every completed section, the assistant shall identify engineering concepts, laws, principles, definitions, physical phenomena, mathematical models, sign conventions, engineering terminology, important assumptions, common misconceptions, and relationships between concepts.
+This stage documents issues to be corrected before creating the Enhanced Edition. It is not the Enhanced Edition itself.
+
+For every completed section, the companion file shall use the suffix:
+
+```text
+-error-pedagogic-fixes.md
+```
+
+Example:
+
+```text
+1.3-current-and-kirchhoffs-current-law-error-pedagogic-fixes.md
+```
+
+The Error/Pedagogic Fixes file records:
+
+- Technical errors.
+- Ambiguous explanations.
+- Weak or incomplete pedagogy.
+- Notation inconsistencies.
+- Figure deficiencies.
+- Missing conceptual bridges.
+- Outdated terminology or engineering practice.
+- Proposed corrections.
+- Rationale for each change to be incorporated into the Enhanced Edition.
+
+The Error/Pedagogic Fixes file is the change-control bridge between the faithful Digital Recreation and the improved Enhanced Edition.
+
+---
+
+# 5. Stage 3 — Enhanced Edition
+
+The Enhanced Edition is created only after the Error/Pedagogic Fixes stage.
+
+The Enhanced Edition applies approved corrections and pedagogical improvements from the Error/Pedagogic Fixes file while preserving the technical meaning of the original source.
+
+Enhanced Edition files use the suffix:
+
+```text
+-enhanced.md
+```
+
+Example:
+
+```text
+1.3-current-and-kirchhoffs-current-law-enhanced.md
+```
+
+---
+
+# 6. Stage 4 — Knowledge Database Extraction
+
+After an Enhanced Edition section has been completed and verified, the assistant performs knowledge extraction.
+
+Concepts are extracted from the Enhanced Edition, not directly from the Digital Recreation.
+
+For every completed enhanced section, the assistant shall identify engineering concepts, laws, principles, definitions, physical phenomena, mathematical models, sign conventions, engineering terminology, important assumptions, common misconceptions, and relationships between concepts.
 
 The assistant shall create an initial set of atomic concept notes using the locked EEKB Concept Note Standard.
 
@@ -43,7 +119,7 @@ The objective is completeness. It is preferable to identify a concept that is la
 
 ---
 
-# 5. Stage 3 — Author Review and Refinement
+# 7. Stage 5 — Author Review and Refinement
 
 The first-pass extraction is not authoritative.
 
@@ -53,7 +129,7 @@ The final knowledge base represents the author's engineering understanding.
 
 ---
 
-# 6. Figure Creation Workflow
+# 8. Figure Creation Workflow
 
 ## Electrical Circuit Diagrams
 
@@ -80,7 +156,7 @@ PNG files are never edited directly.
 
 ---
 
-# 7. Figure Recreation Workflow
+# 9. Figure Recreation Workflow
 
 When the user provides an existing figure from a textbook, paper, or other source:
 
@@ -99,7 +175,7 @@ Use tracing to achieve accuracy, not as a shortcut.
 
 ---
 
-# 8. GitHub Workflow
+# 10. GitHub Workflow
 
 GitHub is the source of truth.
 
@@ -113,11 +189,14 @@ After GitHub is updated, the user will synchronize the local Obsidian working co
 
 ---
 
-# 9. Quality Assurance Workflow
+# 11. Quality Assurance Workflow
 
 Before considering a section complete:
 
 - Digital recreation should be checked against the source.
+- Error/Pedagogic Fixes should document issues and proposed corrections before Enhanced Edition work begins.
+- Enhanced Edition should incorporate approved fixes from the Error/Pedagogic Fixes file.
+- Knowledge extraction should be performed from the Enhanced Edition.
 - Figure references should point only to PNGs.
 - Every PNG should have its master source.
 - Knowledge notes should follow the locked concept template.
@@ -125,7 +204,11 @@ Before considering a section complete:
 
 ---
 
-# 10. Version History
+# 12. Version History
+
+## v1.1
+
+Added the Error/Pedagogic Fixes stage between Digital Recreation and Enhanced Edition. Clarified that Knowledge Database extraction is performed from the Enhanced Edition.
 
 ## v1.0
 
